@@ -29,9 +29,9 @@ import com.example.demo.layer3.EmployeeRepositoryImp;
 			emp.setEname("RUSHABH");
 			emp.setJob("MECHANICAL");
 			emp.setDate(ID);
-			emp.setSalary(450);
+			emp.setSalary(450.0f);
 			emp.setJob("SCIENCE");
-			emp.setComm(127);
+			emp.setComm(127.0f);
 			emp.setMgr(7698);
 			emp.setDno(30);
 			
@@ -64,11 +64,15 @@ import com.example.demo.layer3.EmployeeRepositoryImp;
 			empList=empRepo.selectEmployees();
 			for(Employee emp :empList)
 			{
-				System.out.println(emp.getEmpno());
-				System.out.println(emp.getEname());
-				System.out.println(emp.getComm());
-				System.out.println();
-				System.out.println();
+				System.out.println("Empno  :"+emp.getEmpno());
+				System.out.println("Ename  :"+emp.getEname());
+				System.out.println("EComm  :"+emp.getComm());
+				System.out.println("EJob   :"+emp.getJob());
+				System.out.println("EDate  :"+emp.getDate());
+				System.out.println("Emgr   :"+emp.getMgr());
+				System.out.println("esalary:"+emp.getSalary());
+				System.out.println("dno    :"+emp.getDno());
+				System.out.println("-----------------------------------");
 				
 				
 			}
@@ -89,8 +93,8 @@ import com.example.demo.layer3.EmployeeRepositoryImp;
 			emp.setMgr(2);
 			emp.setJob("Tester");
 			emp.setDate(ID);
-			emp.setSalary(220);
-			emp.setComm(300);
+			emp.setSalary(220.0f);
+			emp.setComm(300.0f);
 			emp.setDno(30);
 			
 			empRepo.updateEmployee(emp);
