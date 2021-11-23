@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Table(name="property12")
 public class Property {
 	@Id
-	//@GeneratedValue
+	@GeneratedValue
 	private int propertyId;
 	
 	

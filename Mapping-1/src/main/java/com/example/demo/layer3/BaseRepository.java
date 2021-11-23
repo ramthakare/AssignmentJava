@@ -14,6 +14,7 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Repository;
 
 
+
 @Repository
 public class BaseRepository {
 	
@@ -77,4 +78,7 @@ public class BaseRepository {
 		entityManager.remove(anyClass);
 		} finally { entityManager.close(); }
 }
+
+	
+	
 }

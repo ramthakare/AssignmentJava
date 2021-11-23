@@ -21,7 +21,31 @@ public class PropertyRepositoryImpl extends BaseRepository implements PropertyRe
 		System.out.println("property inserted...");
 	}
 
-	@Transactional
+	@Override
+	public Property selectProperty(int propertyId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Property> selectBanks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void updateProperty(Property pobj) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteProperty(int propertyId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/*@Transactional
 	public List<Property> selectPropertys() 
 	{
 		List<Property>  proList = new ArrayList<Property>();
@@ -46,6 +70,6 @@ public class PropertyRepositoryImpl extends BaseRepository implements PropertyRe
 
 		}
 		return proList;
-	}
+	}*/
   
 }

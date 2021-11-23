@@ -23,6 +23,7 @@ import org.hibernate.annotations.Fetch;
 public class Customer 
 {
 	@Id
+	@GeneratedValue
 	private int Cust_Id;
 	
 	private String firstName;
@@ -52,11 +53,43 @@ public class Customer
 		@OneToOne
 	private Property property;
 	
-	
+		@OneToOne
+		private Bank bank;
 		
+		@OneToOne
+	private	Application_Details application_details;
+		
+		@OneToOne
+		private Loan loan;
+		
+		@OneToOne
+		private Tracker tracker;
 		
 	
-	
+	public Tracker getTracker() {
+			return tracker;
+		}
+		public void setTracker(Tracker tracker) {
+			this.tracker = tracker;
+		}
+	public Loan getLoan() {
+			return loan;
+		}
+		public void setLoan(Loan loan) {
+			this.loan = loan;
+		}
+	public Application_Details getApplication_details() {
+			return application_details;
+		}
+		public void setApplication_details(Application_Details application_details) {
+			this.application_details = application_details;
+		}
+	public Bank getBank() {
+			return bank;
+		}
+		public void setBank(Bank bank) {
+			this.bank = bank;
+		}
 	public int getCust_Id() {
 		return Cust_Id;
 	}
