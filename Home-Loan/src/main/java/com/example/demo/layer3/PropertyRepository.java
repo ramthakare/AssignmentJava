@@ -12,7 +12,7 @@ import com.example.demo.layer2.Property;
 public interface PropertyRepository {
 	void insertProperty(Property pobj);
 	Property selectProperty(int propertyId); //R
-	List<Property> selectPropertys(); //RA
+	List<Property> selectBanks(); //RA
 	
 	void updateProperty(Property pobj); //U
 	void deleteProperty(int propertyId);
