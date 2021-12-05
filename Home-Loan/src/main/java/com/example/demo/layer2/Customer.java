@@ -1,8 +1,11 @@
 package com.example.demo.layer2;
 
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -19,7 +22,7 @@ import org.hibernate.annotations.Fetch;
 
 
 @Entity
-@Table(name="cust")
+@Table(name="cust8")
 public class Customer 
 {
 	@Id
@@ -53,19 +56,29 @@ public class Customer
 		@OneToOne
 	private Property property;
 	
-		@OneToOne
+		@OneToOne(fetch =FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "customer")
 		private Bank bank;
 		
-		@OneToOne
+		@OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "customer")
 	private	Application_Details application_details;
 		
 		@OneToOne
 		private Loan loan;
 		
-		@OneToOne
+		@OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "customer")
 		private Tracker tracker;
 		
-	
+		@OneToMany(cascade = CascadeType.ALL,mappedBy = "customer")
+	    private Set<Document> doc=new HashSet<Document>(); 
+		
+       
+
+	public Set<Document> getDoc() {
+			return doc;
+		}
+		public void setDoc(Set<Document> doc) {
+			this.doc = doc;
+		}
 	public Tracker getTracker() {
 			return tracker;
 		}

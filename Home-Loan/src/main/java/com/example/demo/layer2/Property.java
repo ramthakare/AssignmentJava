@@ -1,7 +1,9 @@
 package com.example.demo.layer2;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
@@ -9,7 +11,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="property111")
+@Table(name="property2")
 public class Property {
 	@Id
 	@GeneratedValue
@@ -38,7 +40,7 @@ public class Property {
 	
 	private String income;
 	
-	@OneToOne
+	@OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "property")
 	private Customer customer;
 	
 	

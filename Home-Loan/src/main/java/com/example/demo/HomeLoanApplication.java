@@ -8,7 +8,7 @@ public class HomeLoanApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(HomeLoanApplication.class, args);
-		System.out.println("Project Start");
+		System.out.println("!! WelCome Start Home Loan Project !!");
 	}
 
 }

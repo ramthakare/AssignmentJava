@@ -2,18 +2,21 @@ package com.example.demo.layer3;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.layer2.Application_Details;
 
 @Repository
-public class Application_DetailsRepoImp implements Application_DetailsRepo 
+public class Application_DetailsRepoImp extends BaseRepository implements Application_DetailsRepo 
 {
 
-	@Override
+	@Transactional
 	public void insertApplication_Details(Application_Details Aobj) 
 	{
-		
+		super.persist(Aobj);
+		System.out.println("Application_Details insert");
 		
 	}
 

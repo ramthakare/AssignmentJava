@@ -37,7 +37,7 @@ public class CustomerReposioryImpl extends BaseRepository implements CustomerRep
 		System.out.println("cus "+cus.getEmail());
 		System.out.println("cus"+cus.getNationality());
 		System.out.println("cus "+cus.getPanCard());
-		System.err.println();
+		
 	
 
 

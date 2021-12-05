@@ -7,7 +7,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Application111")
+@Table(name="Application8")
 public class Application_Details {
   
 	@Id
