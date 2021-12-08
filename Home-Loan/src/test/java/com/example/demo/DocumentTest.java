@@ -21,7 +21,7 @@ public class DocumentTest
  @Test
 	void insertDocument()
 	{
-	 Customer customer =custRepo.selectCustomer(32);
+	 Customer customer =custRepo.selectCustomer(33);
 		Document doc=new Document();
 		{
 			doc.setPanCard("Ram1234cu");

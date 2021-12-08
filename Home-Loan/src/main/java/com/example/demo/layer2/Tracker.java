@@ -2,8 +2,10 @@ package com.example.demo.layer2;
 
 import java.time.LocalDate;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
@@ -11,7 +13,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="Tracker8")
+@Table(name="Tracker9")
 public class Tracker {
 	@Id
 	private int Tracker_Id;
@@ -22,8 +24,7 @@ public class Tracker {
 	//@Column(name="Approved_Date")
 	 private LocalDate approvedDate;
       
-	@OneToOne
-	private Loan loan;
+	
 	
 	@OneToOne
 	private Customer customer;
@@ -36,12 +37,7 @@ public class Tracker {
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
-	public Loan getLoan() {
-		return loan;
-	}
-	public void setLoan(Loan loan) {
-		this.loan = loan;
-	}
+	
 	
 	
 	public int getTracker_Id() {

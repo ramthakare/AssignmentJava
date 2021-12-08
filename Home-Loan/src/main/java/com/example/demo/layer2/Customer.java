@@ -22,7 +22,7 @@ import org.hibernate.annotations.Fetch;
 
 
 @Entity
-@Table(name="cust8")
+@Table(name="customer10")
 public class Customer 
 {
 	@Id

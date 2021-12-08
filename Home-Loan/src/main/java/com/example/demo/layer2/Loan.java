@@ -2,6 +2,7 @@ package com.example.demo.layer2;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -15,7 +16,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="loan8")
+@Table(name="loan9")
 public class Loan {
 	
 	@Id
@@ -43,18 +44,11 @@ public class Loan {
 	 private Customer customer;
 	 
 	
-	@OneToOne
-	private Tracker tracker;
-	
-	 
+
 	
 	
-	public Tracker getTracker() {
-		return tracker;
-	}
-	public void setTracker(Tracker tracker) {
-		this.tracker = tracker;
-	}
+	
+	
 	public Customer getCustomer() {
 		return customer;
 	}

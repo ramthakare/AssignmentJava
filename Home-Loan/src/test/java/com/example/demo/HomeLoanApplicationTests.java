@@ -24,17 +24,16 @@ class HomeLoanApplicationTests {
 	@Autowired
 	CustomerReposioryImpl cusRepo;
 	
-	@Autowired
-	PropertyRepositoryImpl proRepo;
+	
 	@Test
 	void insertCusTest()
 	{
 		Customer Cus=new  Customer();
 		
-		Cus.setFirstName("Krushna");
-		Cus.setMiddleName("Gajanan");
-		Cus.setLastName("Thakare");
-		Cus.setEmail("krushnathakare4797@gmail.com");
+		Cus.setFirstName("ritesh");
+		Cus.setMiddleName("Pravin");
+		Cus.setLastName("Patil");
+		Cus.setEmail("Rushabharbhat4797@gmail.com");
 		Cus.setPassword("ram@1234");
 		Cus.setPhoneNo(89990706);
 		Cus.setDob(LocalDate.of(2021, 11, 25));
@@ -49,7 +48,7 @@ class HomeLoanApplicationTests {
 	void selectCusTest()
 	{
 		Customer cus;
-		cus=cusRepo.selectCustomer(3);
+		cus=cusRepo.selectCustomer(45);
 		System.out.println("repo : cus "+cus);
 		System.out.println("cus"+cus.getCust_Id());
 		System.out.println("cus "+cus.getFirstName());
@@ -94,12 +93,12 @@ class HomeLoanApplicationTests {
 
 
 	Customer cust = null;
-	cust =cusRepo.find(Customer.class, 25);
+	cust =cusRepo.find(Customer.class, 47);
 	Assertions.assertNotNull(cust);
 
 	cust.setFirstName("ritesh");
 	cust.setMiddleName("Pravin");
-	cust.setLastName("Patil");
+	cust.setLastName("Thakare");
 	cust.setEmail("ritesh@gmail.com");
 	cust.setPassword("lokesh@1234");
 	cust.setPhoneNo(84599503);

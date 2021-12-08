@@ -18,6 +18,10 @@ public class CustomerController {
 
 	@Autowired
 	CustomerReposioryImpl cusRepo;
+//	
+//	@Autowired
+//	CustomerService cusService;
+
 	
 	@GetMapping("/getCust/{x}")//localhost:8080/cust/getCust
 	public Customer getCust(@PathVariable int x)
@@ -28,6 +32,19 @@ public class CustomerController {
 		System.out.println("controller : cust : "+cust.getCust_Id());
 		return cust;
 	}
+//	
+//	@GetMapping("/getCust/{x}")//localhost:8080/cust/getCust
+//	public Customer getCust(@PathVariable int x)
+//	{
+//		Customer cust = null;
+//		cust=cusService.getCustomer(x);
+//		
+//		System.out.println("controller : cust : "+cust.getCust_Id());
+//		return cust;
+//	}
+	
+	
+	
 //	@RequestMapping("/getAll")//localhost:8080/cust/getAll
 //	public List<Customer> getCusts()
 //	{

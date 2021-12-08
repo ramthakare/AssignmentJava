@@ -59,8 +59,8 @@ public class OneToOneTests {
 	@Test
 	void assignExistingLoanToExistingCustomer()
 	{
-		Customer customer=cusRepo.find(Customer.class,4);
-		Loan loan=loanRepo.find(Loan.class, 3);
+		Customer customer=cusRepo.find(Customer.class,39);
+		Loan loan=loanRepo.find(Loan.class, 5);
 				
 		//customer.setProperty(property);
 		//proRepo.sel

@@ -25,7 +25,7 @@ public class LoanTests {
 	void insertLoanTest()
 	{
 		Loan loan=new Loan();
-		loan.setLoanId(4);
+		loan.setLoanId(11);
 		loan.setLoanAmount(345667.0f);
 		loan.setMaxLoanGrant(67843.0f);
 		loan.setRoi(2.5);
@@ -39,7 +39,7 @@ public class LoanTests {
 	void selectloanest()
 	{
 		Loan loan;
-		loan=loanRepo.selectLoan(3);
+		loan=loanRepo.selectLoan(10);
 		System.out.println("repo : loan "+loan);
 		System.out.println("loan   :" +loan.getLoanId());
 		System.out.println("loan   :" +loan.getMaxLoanGrant());
@@ -85,7 +85,7 @@ public class LoanTests {
 
 
 	Loan loan = null;
-	loan =loanRepo.find(Loan.class, 4);
+	loan =loanRepo.find(Loan.class, 10);
 	Assertions.assertNotNull(loan);
 
 	

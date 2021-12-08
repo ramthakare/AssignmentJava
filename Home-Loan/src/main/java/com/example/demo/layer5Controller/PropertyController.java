@@ -17,7 +17,7 @@ public class PropertyController {
 	@Autowired
 	PropertyRepositoryImpl proRepo;
 	
-	@RequestMapping("/getproperty/{propertyId}")//localhost:8080/cust/getCust
+	@RequestMapping("/getproperty/{propertyId}")//localhost:8080/property/getproperty/27
 	public Property getproperty(@PathVariable("propertyId") int x)
 	{
 		Property property = null;
@@ -26,13 +26,13 @@ public class PropertyController {
 		System.out.println("controller : property : "+property.getPropertyId());
 		return property;
 	}
-	@RequestMapping("/getAll")//localhost:8080/cust/getAll
-	public List<Property> getloans()
-	{
-		System.out.println("getAll");
-		List<Property> propertyList;
-		propertyList=proRepo.selectPropertys();
-		return propertyList;
-	}
-	
+//	@RequestMapping("/getAll")//localhost:8080/cust/getAll
+//	public List<Property> getloans()
+//	{
+//		System.out.println("getAll");
+//		List<Property> propertyList;
+//		propertyList=proRepo.selectPropertys();
+//		return propertyList;
+//	}
+//	
 }

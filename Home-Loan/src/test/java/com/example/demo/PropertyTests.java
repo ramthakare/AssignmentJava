@@ -36,7 +36,7 @@ public class PropertyTests {
 	void selectProTest()
 	{
 		Property pro;
-		pro=proRepo.selectProperty(10);
+		pro=proRepo.selectProperty(48);
 		System.out.println("repo : pos "+pro);
 		System.out.println("pro  :" +pro.getPropertyId());
 		System.out.println("pos  :" +pro.getPropertyLoc());

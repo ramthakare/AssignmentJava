@@ -1,5 +1,6 @@
 package com.example.demo.layer3;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -43,8 +44,23 @@ public class TrackerRepositoryImpl extends BaseRepository implements TrackerRepo
 
 	@Override
 	public List<Tracker> selectTrackers() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Tracker>  trackerList = new ArrayList<Tracker>();
+
+		System.out.println("TrackerRepositoryImpl : Selecting all Tracker...");
+		trackerList =  super.findAll("Tracker");
+		System.out.println("repo : trackerList ref  "+trackerList);
+		System.out.println("repo : trackerList size "+trackerList.size());
+
+		for(Tracker tracker : trackerList) {
+			System.out.println("tracker  :"+tracker.getTracker_Id());
+			System.out.println("tracker  :"+tracker.getStatus());
+			System.out.println("tracker  :"+tracker.getApprovedDate());
+			
+			
+			
+
+		}
+		return trackerList;
 	}
 
 	@Transactional
